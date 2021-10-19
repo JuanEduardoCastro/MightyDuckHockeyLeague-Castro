@@ -1,0 +1,376 @@
+html * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+header div {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header div img {
+    height: 120px;
+}
+
+header div h1 {
+    font-size: 3rem;
+    color: gold;
+    text-shadow: 3px, 3px, 5px, red; /* revisar */
+}
+
+header nav {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+header nav a {
+    color: hsla(51, 100%, 50%, 0.658);
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 22px;
+}
+
+header nav a:hover {
+    color: gold;
+}
+
+.botonActivo {
+    color: gold;
+}
+
+/* MAIN */
+
+main {
+    background-image: url(../assets/hockey_2_edit.png);
+    background-repeat: no-repeat;
+    background-size:cover; 
+    background-attachment: fixed;
+    background-position: top;
+    display: flex;
+}
+
+.fondoContenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 58vw;
+    padding-top: 160px;
+    padding-bottom: 8vh;
+}
+
+/* TITULO PAGINA */
+
+.tituloPagina h2, .tituloPagina p {
+    font-size: 2.5rem;
+    padding-left: 5vw;
+}
+
+.tituloPagina p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: -4vh;
+}
+
+/* SECTION GENERAL */
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+section article {
+    color: black;
+    margin-top: 3vw;
+    margin-left: 5vw;
+    padding-right: 1vw;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+section article h3 {
+    font-size: 1.5rem;
+}
+
+/* RULES.HTML */
+
+section article p, article li {
+    margin-top: 10px;
+}
+
+section article ol {
+    margin-top: 10px;
+    padding-left: 1.2vw;
+}
+section article ol li ol {
+    list-style-type: lower-alpha;
+}
+
+.ultimaLista {
+    list-style-type: circle;
+    padding-left: 1.2vw;
+    
+}
+
+/* GAMES.HTML */
+
+.tabla {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6.5vh;
+}
+
+table {
+    width: 80%;
+    height: 80vh;
+}
+
+caption {
+    text-align: start;
+    margin-bottom: 4vh;
+}
+td {
+    text-align: center;
+}
+
+.mostrarMapa input {
+    display: none;
+}
+
+.mostrarMapa label {
+    text-decoration: underline;
+    display: inline-block;
+    width: 100px;
+}
+
+.mostrarMapa div {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    transition: 00.2s;
+}
+
+.mostrarMapa label:active {
+    font-weight: 600;
+}
+
+.mostrarMapa input:checked ~ div {
+    height: 300px;
+}
+
+.notaPie { 
+    width: 90%;
+}
+
+.notaPie p {
+    margin-top: 10px;
+}
+
+.notaPie div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.notaPie div p {
+    width: 24vw;
+}
+
+.notaPie div a{
+    text-decoration: none;
+    color: black;   
+    width: fixed;
+}
+
+.notaPie div p a:hover {
+    font-weight: bolder;
+}
+
+/* REGISTRATION.HTML */
+
+.formulario {
+    width: 90%;
+    align-self: center;
+    margin-top: 5vh;
+}
+
+form, .playersInfo, .closestSchools, .position, .uniform, .permission {
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+h4 {
+    padding: 1vh .5vw;
+    font-size: 1.2rem;
+}
+
+.playersInfo .line {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.labelInput {
+    display: flex;
+    width: 50%;
+    flex: 1;
+}
+
+.labelInput input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.726); 
+    border-radius: 2px;
+    padding: .2vh .5vw;
+}
+.labelInput label {
+    margin: 0 .5vw;
+    margin-top: 1.2vh;
+}
+
+.birthDate .labelInput {
+    display: flex;
+    width: 100%;
+}
+
+.gender {
+    display: flex;
+}
+
+.gender .lineTitle {
+    margin-top: 1.2vh;
+}
+
+.gender .labelInput input {
+    background-color: turquoise;
+    margin-top: 1.5vh;
+}
+
+.grade {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: .5vw;
+    margin-top: 1.2vh;
+}
+.grade input {
+    margin-left: .6vw;
+}
+
+.closestSchools .lineTitle {
+    padding: 1.2vh .5vw 
+}
+
+.closestSchools_order, .position_order, .uniform_order {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.box1_order {
+    width: 32%;
+}
+
+.box1_order .labelInput1 {
+    margin-left: .5vw;
+    margin-top: 1.2vh;
+}
+
+.permission p, .permission_sign, .permission_sign .labelInput1 {
+    margin-left: .5vw;
+    margin-top: 1.2vh;
+    text-align: justify;
+}
+
+.permission_sign {
+    display: flex;
+    flex-direction: column;
+}
+
+.permission_sign div:first-child {
+    display: flex;
+}
+
+.permission_sign div:first-child input {
+    flex-grow: 1;
+    margin-right: 2vw;
+}
+
+.permission_sign input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.726); 
+    border-radius: 2px;
+    padding: .2vh .5vw;
+}
+
+.permission_sign label {
+    margin: 0 .5vw;
+}
+
+.sendButton {
+    background-color: transparent;
+    position: relative;
+    left: 5vw;
+    top: 3vh;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.sendButton:active {
+    font-weight: 600;
+}
+
+/* CONTACT.HTML */
+
+.contacto a {
+    color: black;
+    text-decoration: none;
+}
+
+.contacto a:hover {
+    font-weight: bolder;
+}
+
+/*  SHOW_DATA */
+
+.showData {
+    align-self: center;
+    width: 90%;
+
+}
+/* FOOTER */
+
+footer {
+    background-color: black;
+    color: gold;
+    text-align: center;
+    height: 25px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+
+
+
+
